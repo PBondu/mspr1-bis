@@ -13,6 +13,7 @@ import Infos from "./components/infoPratiques";
 import SocialMedia from "./components/socialMedia";
 import Partners from "./components/partners";
 import arrowUp from "./images/arrow-up-solidWhite.svg"
+import Footer from "./components/footer";
 
 export default function Page() {
   return (
@@ -52,6 +53,7 @@ export default function Page() {
           </FetchMapData>
         </Geoloc>
         
+        <Footer />
       </FetchConcertData>
       <a href="#accueil" className="fixed bottom-0 right-0 p-2 mr-3 mb-4 z-50 w-fit h-fit bg-slate-300/[.7] rounded-xl"><img src={arrowUp} width={25} height={25} alt="" /></a>
 
