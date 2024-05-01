@@ -6,7 +6,7 @@ import { DataPartnersWp } from "./fetchPartners";
 export default function Partners() {
   const partnersInfo = useContext(DataPartnersWp);
   return (
-    <div className="flex flex-col justify-around items-center bg-blue-500 text-white text-xl h-96">
+    <div className="flex flex-col justify-around items-center bg-white text-black text-xl h-96">
       <h3>Partenaires Insitutionnels</h3>
       <div className="flex flex-wrap justify-around w-3/4">
       {partnersInfo.map((partner, index) => (
