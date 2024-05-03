@@ -9,7 +9,7 @@ const FetchConcertData = ({ children }) => {
   const [concertData, setConcertData] = useState([]);
   useEffect(() => {
     async function loadConcertData() {
-      const response = await fetch('https://jayjayyaya.000webhostapp.com/wp-json/wp/v2/concert?per_page=25');
+      const response = await fetch('https://jayjayyaya.000webhostapp.com/wp-json/wp/v2/concert?per_page=30&_=' + new Date().getTime());
       if (!response.ok) {
         console.log("response not ok");
         return;
@@ -17,7 +17,9 @@ const FetchConcertData = ({ children }) => {
 
       const concertData = await response.json();
       setConcertData(concertData);
+      console.log(concertData);
       setConcertData([...concertData].sort((a, b) => new Date(a.acf.horaires) - new Date(b.acf.horaires)));
+      
     }
     loadConcertData();
   }, []);

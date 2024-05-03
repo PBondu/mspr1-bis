@@ -9,7 +9,7 @@ const FetchPartners = ({ children }) => {
   const [partnersData, setPartnersData] = useState([]);
   useEffect(() => {
     async function loadpartnersData() {
-      const response = await fetch('https://jayjayyaya.000webhostapp.com/wp-json/wp/v2/partners?per_page=10');
+      const response = await fetch('https://jayjayyaya.000webhostapp.com/wp-json/wp/v2/partners?per_page=20');
       if (!response.ok) {
         console.log("response not ok");
         return;

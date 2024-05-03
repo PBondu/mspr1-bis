@@ -9,7 +9,7 @@ const FetchMapData = ({ children }) => {
   const [mapData, setMapData] = useState([]);
   useEffect(() => {
     async function loadMapData() {
-      const response = await fetch('https://jayjayyaya.000webhostapp.com/wp-json/wp/v2/map?per_page=15');
+      const response = await fetch('https://jayjayyaya.000webhostapp.com/wp-json/wp/v2/map?per_page=20');
       if (!response.ok) {
         console.log("response not ok");
         return;
